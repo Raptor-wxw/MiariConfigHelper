@@ -12,10 +12,11 @@
 - **setConfigFile()** &ensp;&emsp;&emsp;&emsp;&emsp;_将配置类写入到本地配置文件_
 - **getConfigFromFile()** &emsp;&emsp;_从本地文件加载配置项到内存_
 
-#### createConfigFile()
-**传参个数：1**
-**传参类型：String**
-**传参意义：传入参数为本地配置项文件名（不加后缀）**
+&emsp;
+### createConfigFile()
+**传参个数：1** \
+**传参类型：String** \
+**传参意义：传入参数为本地配置项文件名（不加后缀）** \
 例：
 
 ```java
@@ -26,36 +27,38 @@ try {
 }
 ```
 
-这会在Mirai安装目录下的config目录下新建Config文件夹，并在Config文件夹内生成Config.json文件。
+**这会在Mirai安装目录下的config目录下新建Config文件夹，并在Config文件夹内生成Config.json文件。**
 
-#### setConfigFile()
-**传参个数：2**
-**参数1类型：String**
-**参数1意义：传入参数为本地配置项文件名（不加后缀）**
-**参数2类型：Object**
-**参数2意义：传入参数为工程项目中配置类的对象**
+
+### setConfigFile()
+**传参个数：2** \
+**参数1类型：String** \
+**参数1意义：传入参数为本地配置项文件名（不加后缀）** \
+**参数2类型：Object** \
+**参数2意义：传入参数为工程项目中配置类的对象** \
 例：
 
 ```java
 JavaConfigHelper.setConfigFile("Config", Config.INSTANCE);
 ```
 
-这会将项目中Config类在内存中的数据保存到Config/Config.json配置文件中。
+**这会将项目中Config类在内存中的数据保存到Config/Config.json配置文件中。**
 
-#### getConfigFromFile()
 
-**传参个数：2**
-**参数1类型：String**
-**参数1意义：传入参数为本地配置项文件名（不加后缀）**
-**参数2类型：Class**
-**参数2意义：传入参数为工程项目中配置类的类对象**
+### getConfigFromFile()
+
+**传参个数：2** \
+**参数1类型：String** \
+**参数1意义：传入参数为本地配置项文件名（不加后缀）** \
+**参数2类型：Class** \
+**参数2意义：传入参数为工程项目中配置类的类对象** \
 例：
 
 ```java
 JavaConfigHelper.getConfigFromFile("User", User.class);
 ```
 
-这会将本地配置文件Config.json文件中的配置项加载到项目中Config类的内存中。
+**这会将本地配置文件Config.json文件中的配置项加载到项目中Config类的内存中。**
 
 ## 使用方式
 
