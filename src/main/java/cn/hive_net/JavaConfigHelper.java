@@ -4,14 +4,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 public class JavaConfigHelper {
 
     public static <T> T getConfigFromFile(String fileName, Class<T> object) throws IOException {
         String filePath = String.format("config/%s/%s.json", fileName, fileName);
-        BufferedReader reader = new BufferedReader(new InputStreamReader(Files.newInputStream(Paths.get(filePath)), StandardCharsets.UTF_8));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), StandardCharsets.UTF_8));
         StringBuilder jsonString = new StringBuilder();
         String buffer;
         while ((buffer = reader.readLine()) != null) {
